@@ -80,6 +80,8 @@ git clone https://github.com/lokerxx/JavaVul
 
 ![image-20240127215349622](.gitbook/assets/image-20240127215349622.png)
 
+> 基本WEB漏洞的代码审计参考：[这里](https://github.com/lokerxx/CybersecurityNote/tree/master/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/JAVA%E6%BC%8F%E6%B4%9E)
+
 
 
 ## SimpleAgent
