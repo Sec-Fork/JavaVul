@@ -40,6 +40,8 @@ git clone https://github.com/lokerxx/JavaVul
 
 > 因为漏洞应用比较多**但是接口比较少**，我给每个应用配置256-512M内存（测试运行要8G内存）。如果要配置大一点测试 IAST AGENT，则可以批量修改`docker-compose.yaml`的`-Xms256m -Xmx512m`的环境变量
 
+> sh脚本在Windows系统创建，有可能有编码问题，可以使用`dos2unix run-local-build.sh`转换成Linux编码
+
 ### 压力测试
 
 部署运行
