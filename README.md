@@ -318,6 +318,7 @@ adding: my/agent/SimpleAgent.class(in = 492) (out= 320)(deflated 34%)
 - https://github.com/mamba-2021/myjavavul
 - https://github.com/zhlu32/range_java_micro_service_seclab
 - https://rasp.baidu.com/doc/install/testcase.html
+- https://github.com/lemono0/FastJsonParty/
 
 ## Star History Chart
 

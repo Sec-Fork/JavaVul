@@ -348,7 +348,7 @@ requests_config = {
         'method': 'POST',
         'url': 'http://{}:9976/fastjson1.2.80-process'.format(host),
         'headers': {'Content-Type': 'application/json'},
-        'data': '',
+        'data': '{"@type": "java.lang.Exception","@type": "myapp.Poc","name": "ping fastjson1.2.80-process.dnslog.cn"}',
         'name': 'fastjson-1.2.80反序列漏洞',
         'type': 'attack',
     },
@@ -367,7 +367,7 @@ requests_config = {
         'url': 'http://{}:9975/fastjson1.2.83-process'.format(host),
         'headers': {'Content-Type': 'application/json'},
         'data': '{"name":"123","email":"123@123","age":"123"}',
-        'name': 'fastjson-1.2.83-没有反序列漏洞',
+        'name': 'fastjson-1.2.83-反序列漏洞',
         'type': 'normal',
     },
 
