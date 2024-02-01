@@ -1,5 +1,7 @@
 # JavaVul
 
+![](https://socialify.git.ci/lokerxx/JavaVul/image?description=1&font=Inter&forks=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light)
+
 ## 介绍
 
 Java 安全漏洞靶场，用于测试IAST和扫描器的被动扫描功能，集合了多个安全漏洞，利用docker镜像为每个靶场独立环境运行。
@@ -40,8 +42,6 @@ git clone https://github.com/lokerxx/JavaVul
 
 > 因为漏洞应用比较多**但是接口比较少**，我给每个应用配置256-512M内存（测试运行要8G内存）。如果要配置大一点测试 IAST AGENT，则可以批量修改`docker-compose.yaml`的`-Xms256m -Xmx512m`的环境变量
 
-> sh脚本在Windows系统创建，有可能有编码问题，可以使用`dos2unix run-local-build.sh`转换成Linux编码
-
 ### 压力测试
 
 部署运行
@@ -81,8 +81,6 @@ git clone https://github.com/lokerxx/JavaVul
 可以批量发送请求，各个漏洞的回显，会在下面显示。
 
 ![image-20240127215349622](.gitbook/assets/image-20240127215349622.png)
-
-> 基本WEB漏洞的代码审计参考：[这里](https://github.com/lokerxx/CybersecurityNote/tree/master/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/JAVA%E6%BC%8F%E6%B4%9E)
 
 
 
@@ -319,3 +317,6 @@ adding: my/agent/SimpleAgent.class(in = 492) (out= 320)(deflated 34%)
 - https://github.com/zhlu32/range_java_micro_service_seclab
 - https://rasp.baidu.com/doc/install/testcase.html
 
+## Star History Chart
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lokerxx/JavaVul&type=Date)](https://star-history.com/#lokerxx/JavaVul&Date)
