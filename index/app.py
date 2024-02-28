@@ -55,9 +55,15 @@ def index():
     attack_data = [{**config, 'api': key} for key, config in requests_config.items() if config['type'] == 'attack']
     normal_data = [{**config, 'api': key} for key, config in requests_config.items() if config['type'] == 'normal']
     repair_data = [{**config, 'api': key} for key, config in requests_config.items() if config['type'] == 'repair']
+    mistake_data = [{**config, 'api': key} for key, config in requests_config.items() if config['type'] == 'mistake']
 
     # When rendering the template
-    return render_template('index.html', attack_data=attack_data, normal_data=normal_data,repair_data=repair_data)
+    return render_template('index.html',
+                           attack_data=attack_data,
+                           normal_data=normal_data,
+                           repair_data=repair_data,
+                           mistake_data = mistake_data
+                           )
 
 @app.route('/<path:attack_type>', methods=['GET', 'POST'])
 def handle_request(attack_type):

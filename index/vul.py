@@ -389,6 +389,15 @@ requests_config = {
         'name': 'druid未授权漏洞',
         'type': 'repair',
     },
+
+'druid_sqlwall': {
+        'method': 'GET',
+        'url': 'http://{}:9997/druid_sql?id=1'.format(host),
+        'headers': {'Content-Type': 'application/json'},
+        'name': 'druid-SQL防火墙',
+        'type': 'mistake',
+    },
+
     'actuator2_unauthorized': {
         'method': 'GET',
         'url': 'http://{}:9995/actuator'.format(host),
@@ -888,6 +897,63 @@ requests_config = {
         'name': 'swagger-ui-未授权访问漏洞',
         'type': 'attack',
     },
+
+'ReDos_normal_1': {
+        'method': 'GET',
+        'url': """http://{}:9991/testReDos1?input=1""".format(
+            host),
+        'headers': {'Content-Type': 'application/x-www-form-urlencoded'},
+        'name': 'ReDoS攻击-1',
+        'type': 'normal',
+    },
+
+'ReDos_normal_1': {
+        'method': 'GET',
+        'url': """http://{}:9991/testReDos1?input=1""".format(
+            host),
+        'headers': {'Content-Type': 'application/x-www-form-urlencoded'},
+        'name': 'ReDoS攻击-(a+)+',
+        'type': 'normal',
+    },
+
+'ReDos_normal_2': {
+        'method': 'GET',
+        'url': """http://{}:9991/testReDos2?input=1""".format(
+            host),
+        'headers': {'Content-Type': 'application/x-www-form-urlencoded'},
+        'name': 'ReDoS攻击-([a-zA-Z]+)*',
+        'type': 'normal',
+    },
+
+'ReDos_normal_3': {
+        'method': 'GET',
+        'url': """http://{}:9991/testReDos3?input=1""".format(
+            host),
+        'headers': {'Content-Type': 'application/x-www-form-urlencoded'},
+        'name': 'ReDoS攻击-(a|aa)+',
+        'type': 'normal',
+    },
+
+'ReDos_normal_4': {
+        'method': 'GET',
+        'url': """http://{}:9991/testReDos4?input=1""".format(
+            host),
+        'headers': {'Content-Type': 'application/x-www-form-urlencoded'},
+        'name': 'ReDoS攻击-(a|a?)+',
+        'type': 'normal',
+    },
+'ReDos_normal_5': {
+        'method': 'GET',
+        'url': """http://{}:9991/testReDos5?input=1""".format(
+            host),
+        'headers': {'Content-Type': 'application/x-www-form-urlencoded'},
+        'name': 'ReDoS攻击-(.*a){20}',
+        'type': 'normal',
+    },
+
+
+
+
 
     'xxe_wxpay_attack': {
         'method': 'POST',

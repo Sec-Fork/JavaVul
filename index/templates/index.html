@@ -143,12 +143,35 @@
 </table>
 
 
+<h2>安全漏洞清单-误报</h2>
+<table border="1">
+    <tr>
+        <th>漏洞名称</th>
+        <th>请求方法</th>
+        <th>接口</th>
+        <th style="width: 150px;">操作</th>
+    </tr>
+    {% for item in mistake_data %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.method }}</td>
+        <td>{{ item.url }}</td>
+        <td>
+            <button onclick="sendRequest('{{ item.api }}', '{{ item.method }}')">测试</button>
+            <button onclick="openReplayModal('{{ item.api }}')">重放数据包</button>
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
 
 
 <!-- 批量请求按钮 -->
 <button onclick="sendBatchRequest(attack_data)" class="button">发送攻击批量请求</button>
 <button onclick="sendBatchRequest(normal_data)" class="button button2">发送正常批量请求</button>
 <button onclick="sendBatchRequest(repair_data)" class="button button2">发送修复批量请求</button>
+<button onclick="sendBatchRequest(mistake_data)" class="button button2">发送误报批量请求</button>
 <button onclick="clearLog()" class="button button3">清除日志</button>
 
 <!-- 日志输出区域 -->
@@ -333,6 +356,7 @@
     var attack_data = {{ attack_data | tojson | safe }};
     var normal_data = {{ normal_data | tojson | safe }};
     var repair_data = {{ repair_data | tojson | safe }};
+    var mistake_data = {{ mistake_data | tojson | safe }};
 
 
 </script>
